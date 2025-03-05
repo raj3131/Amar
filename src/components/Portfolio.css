@@ -17,6 +17,9 @@
     padding-bottom: 2rem;
 }
 
+
+
+
 .pots {
     display: flex;
     justify-content: space-between;
@@ -59,3 +62,69 @@
  h3{
     font-size: 2rem;
 }
+
+
+
+@media screen and (max-width: 765px) {
+    .portfolio-container {
+        text-align: center;
+        padding: 2rem 1rem;
+        background-color: #f8f1e7;
+    }
+    .portfolio-intro {
+        max-width: 900px;
+        margin: 0 auto;
+        font-size: 1rem;
+        line-height: 1.8;
+        color: #5a3e36;
+        font-style: italic;
+        text-align: justify;
+        padding-bottom: 2rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+    .pots {
+        padding-bottom: 1.2rem;
+         display: flex;
+         justify-content: space-between;
+         align-items: center; /* Align items vertically */
+         gap: 5px; /* Space between image and text */
+         padding-left: 1rem;
+         padding-right: 1.1rem;
+     }
+
+     .pots img {
+         width: 10rem; /* Adjust image size */
+         height: auto;
+         border-radius: 8px;
+     }
+
+     .pots-text {
+         display: flex;
+         flex-direction: column; /* Stack h3 and p */
+     }
+     /*================*/
+     .statue {
+         padding-bottom: 1.2rem;
+         display: flex;
+         justify-content: space-between;
+         align-items: center; /* Align items vertically */
+         gap: 5px; /* Space between image and text */
+         padding-left: 1rem;
+         padding-right: 1.5rem;
+     }
+
+     .statue img {
+         width: 10rem; /* Adjust image size */
+         height: auto;
+         border-radius: 8px;
+     }
+
+     .statue-text {
+         display: flex;
+         flex-direction: column; /* Stack h3 and p */
+     }
+     h3{
+         font-size: 1rem;
+     }
+ }

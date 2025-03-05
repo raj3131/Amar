@@ -13,7 +13,6 @@ const Portfolio = () => {
         { title: "Interior Showpieces", image: interiorshowpiece },
         { title: "Wall-Mounts", image: wallmount },
         { title: "Murals", image: murals },
-
     ];
 
     const portfolioRef = useRef([]);
@@ -43,21 +42,60 @@ const Portfolio = () => {
 
     return (
         <div className="portfolio-container">
-            <h2 className="portfolio-title">Our Creations</h2>
-            <div className="portfolio-grid">
-                {categories.map((category, index) => (
-                    <div
-                        key={index}
-                        className="portfolio-item"
-                        ref={(el) => (portfolioRef.current[index] = el)}
-                    >
-                        <img src={category.image} alt={category.title} className="portfolio-image" />
-                        <div className="overlay">
-                            <h3>{category.title}</h3>
-                        </div>
-                    </div>
-                ))}
+            {/* Intro Paragraph */}
+            <p className="portfolio-intro">
+                These objects add aesthetic by taking it away. They simply are what they are: a celebration of a style that lives at peace with its own little imperfections.
+                Some are functional, they are hand made and are built to be used. Some incarnate the dysfunctionality intrinsic to society by hinting at the fragility of the
+                human condition in a more general sense. These claymen figure sculptures emerge from a careful observation of the common man and his dilemmas.
+                They are peaceful, contemplative and quiet. While going through their own existential crises they are mere witnesses to the fact that
+                <em>“Man is losing his humanity and becoming a thing amongst the things he produces.”</em>
+            </p>
+
+            <div className="pots">
+                <img src={pots}/>
+                <div className="pots-text">
+                    <h3>Miniature Pots & Vases</h3>
+                    <p>Beautiful handcrafted pots to enhance your space.</p>
+                </div>
             </div>
+
+
+            <div className="statue">
+                <div className="statue-text">
+                    <h3>statue</h3>
+                    <p>Beautiful handcrafted pots to enhance your space.</p>
+                </div>
+                <img src={statue}/>
+            </div>
+
+
+            <div className="pots">
+                <img src={interiorshowpiece}/>
+                <div className="pots-text">
+                    <h3>Miniature Pots & Vases</h3>
+                    <p>Beautiful handcrafted pots to enhance your space.</p>
+                </div>
+            </div>
+
+            <div className="statue">
+                <div className="statue-text">
+                    <h3>statue</h3>
+                    <p>Beautiful handcrafted pots to enhance your space.</p>
+                </div>
+                <img src={wallmount}/>
+            </div>
+
+
+            <div className="pots">
+                <img src={murals}/>
+                <div className="pots-text">
+                    <h3>Miniature Pots & Vases</h3>
+                    <p>Beautiful handcrafted pots to enhance your space.</p>
+                </div>
+            </div>
+
+
+
         </div>
     );
 };

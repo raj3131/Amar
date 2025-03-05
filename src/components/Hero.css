@@ -4,7 +4,6 @@
     display: flex;
     padding-left: 3rem;
     align-items: center; /* Vertically center content */
-
     background-size: cover; /* Ensure the background image covers the entire section */
     background-position: center; /* Center the background image */
     background-image: url('https://www.shutterstock.com/image-photo/male-artisan-holding-freshly-made-600nw-2272053287.jpg');

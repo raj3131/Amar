@@ -48,7 +48,7 @@
     transition: transform 0.5s ease-in-out, filter 0.3s ease-in-out;
 }
 
-/* Hover effect */
+/* Hover effect on desktop */
 .portfolio-item:hover .portfolio-image {
     transform: scale(1.05);
     filter: brightness(0.8);
@@ -70,12 +70,14 @@
     transition: opacity 0.4s ease-in-out;
 }
 
-/* Show overlay on hover */
-.portfolio-item:hover .overlay {
-    opacity: 1;
+/* Show overlay on hover (Desktop only) */
+@media (min-width: 769px) {
+    .portfolio-item:hover .overlay {
+        opacity: 1;
+    }
 }
 
-/* Responsive Styles */
+/* Show overlay by default on mobile */
 @media (max-width: 768px) {
     .portfolio-title {
         font-size: 2rem;
@@ -87,7 +89,15 @@
         gap: 0.3rem;
     }
 
+    /* Always show the overlay on mobile */
     .overlay {
+        opacity: 1;
+    }
+
+    /* Ensure overlay text is readable */
+    .overlay h3 {
         font-size: 1.2rem;
+        text-align: center;
+        padding: 0 10px;
     }
 }

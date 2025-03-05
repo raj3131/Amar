@@ -1,52 +1,58 @@
 /* Hero Container */
 .hero-container {
-    height: 100vh; /* Full viewport height */
+    height: 70vh; /* Full viewport height */
     display: flex;
+    padding-left: 3rem;
     align-items: center; /* Vertically center content */
-    justify-content: center; /* Horizontally center content */
+
     background-size: cover; /* Ensure the background image covers the entire section */
     background-position: center; /* Center the background image */
     background-image: url('https://www.shutterstock.com/image-photo/male-artisan-holding-freshly-made-600nw-2272053287.jpg');
+
 }
 
 /* Hero Content */
 .hero-content {
-    text-align: center; /* Center-align text */
+    text-align: left;
     color: white; /* White text color */
 }
 
-/* Hero Heading */
 .hero-heading {
     font-size: 3.75rem; /* 60px */
     line-height: 1;
-    font-family: serif; /* Serif font for a classic look */
     margin-bottom: 1rem; /* 16px */
+    position: relative; /* For underline positioning */
+    text-align: left; /* Align text to left */
 }
 
-/* Hero Subtitle */
+.hero-divider {
+    width: 35rem; /* Width of the divider */
+    height: 4px; /* Thickness */
+    background-color: white; /* Color of divider */
+    margin: 10px 0; /* Space around divider */
+}
+
 .hero-subtitle {
     font-size: 1.25rem; /* 20px */
     line-height: 1.75rem; /* 28px */
     margin-bottom: 2rem; /* 32px */
+    text-align: left; /* Align text to left */
 }
 
-/* Hero Button */
-.hero-button {
-    background-color: #e2725b; /* Terracotta color */
-    color: white;
-    padding: 0.75rem 2rem; /* 12px top/bottom, 32px left/right */
-    border-radius: 9999px; /* Fully rounded button */
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth hover transition */
-}
 
-.hero-button:hover {
-    background-color: rgba(226, 114, 91, 0.9); /* Slightly transparent on hover */
-}
+
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .hero-container {
+
+        padding-left: 1rem;
+
+
+    }
+
     .hero-heading {
         font-size: 2.5rem; /* 40px for smaller screens */
     }
@@ -57,5 +63,11 @@
 
     .hero-button {
         padding: 0.5rem 1.5rem; /* 8px top/bottom, 24px left/right */
+    }
+    .hero-divider {
+        width: 20rem; /* Width of the divider */
+        height: 4px; /* Thickness */
+        background-color: white; /* Color of divider */
+        margin: 10px 0; /* Space around divider */
     }
 }

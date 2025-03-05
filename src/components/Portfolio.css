@@ -1,0 +1,93 @@
+/* Portfolio Container */
+.portfolio-container {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #f8f1e7;
+}
+
+/* Portfolio Title */
+.portfolio-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: "Playfair Display", serif;
+    color: #8a4b30;
+    margin-bottom: 2rem;
+}
+
+/* Portfolio Grid - Masonry Style */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 280px;
+    gap: 0.5rem; /* Reduced gap for a seamless effect */
+    align-items: stretch;
+}
+
+/* Portfolio Item */
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Fade-in animation */
+.portfolio-item.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Portfolio Image */
+.portfolio-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out, filter 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.portfolio-item:hover .portfolio-image {
+    transform: scale(1.05);
+    filter: brightness(0.8);
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: "Playfair Display", serif;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+/* Show overlay on hover */
+.portfolio-item:hover .overlay {
+    opacity: 1;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .portfolio-title {
+        font-size: 2rem;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        grid-auto-rows: 200px;
+        gap: 0.3rem;
+    }
+
+    .overlay {
+        font-size: 1.2rem;
+    }
+}

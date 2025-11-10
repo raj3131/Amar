@@ -9,10 +9,10 @@ import murals from "../images/portfolio/murals.webp";
 const Portfolio = () => {
     const categories = [
         { title: "Miniature Pots & Vases", image: pots },
-        { title: "Statues of Famous Personalities", image: statue },
-        { title: "Interior Showpieces", image: interiorshowpiece },
-        { title: "Wall-Mounts", image: wallmount },
-        { title: "Murals", image: murals },
+        { title: "Clay Statues & Sculptures", image: statue },
+        { title: "Interior Clay Showpieces", image: interiorshowpiece },
+        { title: "Wall-Mounted Clay Art", image: wallmount },
+        { title: "Clay Murals & Panels", image: murals },
     ];
 
     const portfolioRef = useRef([]);
@@ -54,48 +54,42 @@ const Portfolio = () => {
             <div className="pots">
                 <img src={pots}/>
                 <div className="pots-text">
-                    <h3>Miniature Pots & Vases</h3>
+                    <h3>{categories[0].title}</h3>
                     <p>Beautiful handcrafted pots to enhance your space.</p>
                 </div>
             </div>
 
-
             <div className="statue">
                 <div className="statue-text">
-                    <h3>statue</h3>
-                    <p>Beautiful handcrafted pots to enhance your space.</p>
+                    <h3>{categories[1].title}</h3>
+                    <p>Elegant clay statues capturing timeless expression.</p>
                 </div>
                 <img src={statue}/>
             </div>
 
-
             <div className="pots">
                 <img src={interiorshowpiece}/>
                 <div className="pots-text">
-                    <h3>Miniature Pots & Vases</h3>
-                    <p>Beautiful handcrafted pots to enhance your space.</p>
+                    <h3>{categories[2].title}</h3>
+                    <p>Handcrafted showpieces to enrich your interiors.</p>
                 </div>
             </div>
 
             <div className="statue">
                 <div className="statue-text">
-                    <h3>statue</h3>
-                    <p>Beautiful handcrafted pots to enhance your space.</p>
+                    <h3>{categories[3].title}</h3>
+                    <p>Beautifully designed wall-mounted clay creations.</p>
                 </div>
                 <img src={wallmount}/>
             </div>
 
-
             <div className="pots">
                 <img src={murals}/>
                 <div className="pots-text">
-                    <h3>Miniature Pots & Vases</h3>
-                    <p>Beautiful handcrafted pots to enhance your space.</p>
+                    <h3>{categories[4].title}</h3>
+                    <p>Detailed clay murals that tell stories through art.</p>
                 </div>
             </div>
-
-
-
         </div>
     );
 };
